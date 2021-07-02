@@ -1,0 +1,42 @@
+.menu__btn {
+    display: none;
+    @include respond-to(tablet-portrait) {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        position: relative;
+        right: 50%;
+        top: -15px;
+    }
+    &-line {
+        width: 100%;
+        height: 2px;
+        background-color: $color-black-pearl;
+        position: absolute;
+        left: 0;
+        top: 14px;
+    }
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: transparent;
+        left: 0;
+        background-color: $color-black-pearl;
+    }
+    &::before {
+        top: 0;
+    }
+    &::after {
+        bottom: 0;
+    }
+}
+
+.menu__list.menu__list--active{
+    transform: translateY(0);
+    transition: all 1s;
+}

@@ -22,8 +22,8 @@ img {
 }
 
 .container {
-    max-width: 1300px;
-    padding: 0 10px;
+    max-width: 1170px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -31,3 +31,62 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    max-width: 186px;
+}
+
+.sup-title {
+    font-family: $r-font-normal;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    color: $color-denim;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-family: $g-font-medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 140%;
+    color: $color-black-pearl;
+    @include respond-to(tablet-portrait) {
+        font-size: 20px;
+    }
+    &_blue {
+        color: $color-denim;
+    }
+}
+
+.text {
+    font-family: $r-font-normal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    color: $color-black-pearl;
+    opacity: 0.6;
+}
+
+.form {
+    &-input {
+        width: 405px;
+        height: 57px;
+        padding: 15px 30px;
+        border-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px 0 0 5px;
+        @media screen and (max-width: 500px) {
+            width: 200px;
+            height: 41px;
+        }
+    }
+    &-btn {
+        position: relative;
+        left: -10px;
+        padding: 14px 30px 15px;
+    }
+}
