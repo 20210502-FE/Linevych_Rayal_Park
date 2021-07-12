@@ -1,29 +1,53 @@
 .client {
-    margin-bottom: 140px;
+    padding: 140px 0;
+
     @include respond-to(tablet-landscape) {
-        margin-bottom: 80px;
+        padding: 80px;
     }
+
+    &__top {
+
+        @media screen and (max-width: 700px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+
     &__title {
         margin-bottom: 60px;
+
+        @media screen and (max-width: 700px) {
+            margin-bottom: 40px;
+        }
     }
+
     &__content {
+        margin: -15px -15px;
         @include respond-to(desktop) {
            justify-content: center;
            margin: 0 -15px;
         }
     }
+
+    &__wrapper {
+        padding: 15px;
+    }
+
     &__item {
         padding: 28px 40px 27px 39px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
         border-radius: 10px;
-        width: 360px;
-        height: 325px;
-        margin-bottom: 30px;
-        @include respond-to(desktop) {
-            margin: 0 15px 15px;
-         }
+        width: 335px;
+        height: 345px;
+
+        @include respond-to(phone-only) {
+            padding: 20px 10px;
+        }
     }
+
     &__img {
         width: 100px;
         height: 100px;
@@ -33,7 +57,14 @@
     &__text {
         max-width: 281px;
         position: relative;
-        margin-bottom: 30px;
+        left: 0;
+        right: 0;
+        margin: 0 auto 30px;
+
+        @include respond-to(phone-only) {
+            max-width: 230px;
+        }
+
         &::before {
             content: '';
             width: 24px;
@@ -44,23 +75,23 @@
             top: -20px;
         }
     }
+
     &__name {
         font-family: $g-font-medium;
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
         line-height: 150%;      
-        color: $color-black-pearl;
-        opacity: 0.7;
-        bottom: 5px;
+        color: rgba(8, 31, 50, 0.7);
+        margin-bottom: 5px;
     }
+
     &__social {
         font-family: $r-font-normal;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         line-height: 160%;
-        color: $color-black-pearl;
-        opacity: 0.7;
+        color: rgba(8, 31, 50, 0.7);
     }
 }

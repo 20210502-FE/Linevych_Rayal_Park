@@ -54,8 +54,9 @@ body {
     font-size: 32px;
     line-height: 140%;
     color: $color-black-pearl;
+
     @include respond-to(tablet-portrait) {
-        font-size: 20px;
+        font-size: 26px;
     }
     &_blue {
         color: $color-denim;
@@ -68,22 +69,24 @@ body {
     font-weight: normal;
     font-size: 18px;
     line-height: 160%;
-    color: $color-black-pearl;
-    opacity: 0.6;
+    color: rgba(8, 31, 50, 0.6);
 }
 
 .form {
+
     &-input {
         width: 405px;
         height: 57px;
         padding: 15px 30px;
         border-color: rgba(0, 0, 0, 0.3);
         border-radius: 5px 0 0 5px;
+
         @media screen and (max-width: 500px) {
             width: 200px;
             height: 41px;
         }
     }
+
     &-btn {
         position: relative;
         left: -10px;

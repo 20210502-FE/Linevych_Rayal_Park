@@ -1,58 +1,70 @@
 .footer {
     padding-bottom: 145px;
+
     @include respond-to(tablet-landscape) {
         padding-bottom: 30px;
     }
+
     &__inner {
+
         @include respond-to(desktop) {
             justify-content: center;
         }
     }
+
     &__text {
         font-family: $p-font-normal;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
         line-height: 150%;
-        color: $color-black-pearl;
-        opacity: 0.7;
+        color: rgba(8, 31, 50, 0.7);
         max-width: 257px;
         margin:-30px 0 30px;
     }
+
     &__site {
         margin-bottom: 15px;
+
         &-link {
             font-family: $p-font-normal;
             font-style: normal;
             font-weight: normal;
             font-size: 20px;
             line-height: 150%;
-            color: $color-black-pearl;
-            opacity: 0.7;  
+            color: rgba(8, 31, 50, 0.7); 
             transition: all .5s;
+
             &:hover {
                 color: $color-denim;
             }
         }
     }
+
     &__social {
         padding: 16px 38px 0;
+
         &-links {
             margin: 0 -12.5px;
         }
+
         &-link {
             padding: 0 12.5px;
         }
+
         &-networks {
             width: 20px;
             height: 20px;
         }
     }
+
     &__nav {
         padding: 70px 38px 0;
+
         @include respond-to(tablet-portrait) {
             padding-top: 30px;
         }
+
         &-title {
             font-family: $p-font-normal;
             font-style: normal;
@@ -62,30 +74,35 @@
             color: $color-black-pearl;
             margin-bottom: 30px;
         } 
+
         &-item {
             margin-bottom: 20px;
         }
+
         &-link {
             font-family: $p-font-medium;
             font-style: normal;
             font-weight: 500;
             font-size: 16px;
             line-height: 150%;
-            color: $color-black-pearl;
-            opacity: 0.7;
+            color: rgba(8, 31, 50, 0.7);
             transition: all .5s;
             &:hover {
                 color: $color-denim;
             }
         }
     }
+
     &__sub {
         padding: 70px 0 0 20px;
+
         @include respond-to(tablet-portrait) {
             padding-top: 30px;
         }
     }
+
     &__form {
+        
         &-input {
         max-width: 275px;
         }
