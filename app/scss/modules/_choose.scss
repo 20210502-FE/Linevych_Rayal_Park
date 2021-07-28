@@ -15,15 +15,15 @@
     }
     
     &__content {
-        margin: -15px -15px;
+        margin: -15px;
 
         @include respond-to(desktop) {
             justify-content: center;
         }
     }
 
-    &__wrapper {
-        padding: 15px 15px;
+    &__column {
+        padding: 15px;
     }
 
     &__item {

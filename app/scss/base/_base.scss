@@ -35,7 +35,7 @@ body {
     max-width: 186px;
 }
 
-.sup-title {
+.subtitle {
     font-family: $r-font-normal;
     font-style: normal;
     font-weight: 500;
@@ -58,8 +58,18 @@ body {
     @include respond-to(tablet-portrait) {
         font-size: 26px;
     }
+    
     &_blue {
+        font-family: $g-font-semi-bold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 57px;
+        line-height: 120%;
         color: $color-denim;
+
+        @include respond-to(tablet-portrait) {
+            font-size: 26px;
+        }
     }
 }
 
@@ -70,26 +80,4 @@ body {
     font-size: 18px;
     line-height: 160%;
     color: rgba(8, 31, 50, 0.6);
-}
-
-.form {
-
-    &-input {
-        width: 405px;
-        height: 57px;
-        padding: 15px 30px;
-        border-color: rgba(0, 0, 0, 0.3);
-        border-radius: 5px 0 0 5px;
-
-        @media screen and (max-width: 500px) {
-            width: 200px;
-            height: 41px;
-        }
-    }
-
-    &-btn {
-        position: relative;
-        left: -10px;
-        padding: 14px 30px 15px;
-    }
 }

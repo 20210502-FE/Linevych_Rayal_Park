@@ -15,16 +15,18 @@
         <div class="container">
             <div class="header__content flex flex_space-between flex_wrap">
                 <div class="header__content-nav flex flex_wrap">
-                    <a href="/"><img class="logo header__logo" src="assets/images/logo.png" alt="logo"></a>
+                    <a class="header__logo" href="/"><img class="logo" src="assets/images/logo.png" alt="logo"></a>
                     <nav class="menu">
-                        <button class="menu__btn">
-                            <span class="menu__btn-line"></span>
+                        <button id="menuBtn" class="menu__btn">
+                            <div class="menu__line menu__line-top" id="menuLineTop"></div>
+                            <div class="menu__line menu__line-center" id="menuLineCenter"></div>
+                            <div class="menu__line menu__line-bottom" id="menuLineBottom"></div>
                         </button>
-                        <ul class="menu__list flex">
-                            <li class="menu__item"><a class="menu__item-link" href="#">Home</a></li>
-                            <li class="menu__item"><a class="menu__item-link" href="#">Features</a></li>
-                            <li class="menu__item"><a class="menu__item-link" href="#">Gallary</a></li>
-                            <li class="menu__item"><a class="menu__item-link" href="#">Testimonials </a></li>
+                        <ul id="menuList" class="menu__list flex">
+                            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Features</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Gallary</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Testimonials </a></li>
                         </ul>
                     </nav>
                 </div>
@@ -37,11 +39,11 @@
     <main>
         <section class="banner">
             <div class="container">
-                <h4 class="sup-title uppercase">
+                <h4 class="subtitle uppercase">
                     Serenity
                 </h4>
                 <h1 class="banner__title">
-                    Stay with us feel like <span class="title_blue"> home</span>.
+                    Stay with us feel like <span class="title title_blue"> home</span>.
                 </h1>
                 <div class="text banner__text">
                     Pet-friendly hotels are becoming increasingly popular; appealing to travellers who can’t bear to be
@@ -50,20 +52,20 @@
                 <div class="banner__button">
                     <a class="button" href="#">Read more</a>
                 </div>
-                <div class="banner__bottom flex">
-                    <div class="banner__item">
-                        <h5 class="banner__item-title">Cheek in</h5>
-                        <p class="banner__item-text">10 Feb 2021</p>
+                <div class="reservation flex">
+                    <div class="reservation__item">
+                        <h5 class="reservation__item-title">Cheek in</h5>
+                        <p class="reservation__item-text">10 Feb 2021</p>
                     </div>
-                    <div class="banner__item">
-                        <h5 class="banner__item-title">Cheek out</h5>
-                        <p class="banner__item-text">13 Feb 2021</p>
+                    <div class="reservation__item">
+                        <h5 class="reservation__item-title">Cheek out</h5>
+                        <p class="reservation__item-text">13 Feb 2021</p>
                     </div>
-                    <div class="banner__item">
-                        <h5 class="banner__item-title">Person</h5>
-                        <p class="banner__item-text">2 Adults 1 kid</p>
+                    <div class="reservation__item">
+                        <h5 class="reservation__item-title">Person</h5>
+                        <p class="reservation__item-text">2 Adults 1 kid</p>
                     </div>
-                    <div class="banner__button flex flex_align-center">
+                    <div class="reservation__button flex flex_align-center">
                         <a class="button" href="#">Find room</a>
                     </div>
                 </div>
@@ -72,14 +74,14 @@
         <section class="info">
             <div class="container">
                 <div class="info__inner flex">
-                    <div class="info__content">
+                    <div class="info__column">
                         <img class="info__img" src="assets/images/info-img-1.jpg" alt="background-image">
                         <div class="info__video">
                             <img class="info__video-img" src="assets/images/info-video.jpg" alt="video">
                         </div>
                     </div>
-                    <div class="info__content">
-                        <h4 class="sup-title uppercase">
+                    <div class="info__column">
+                        <h4 class="subtitle uppercase">
                             dream holidays
                         </h4>
                         <h2 class="title info__title">
@@ -102,7 +104,7 @@
                     crowd. Content marketing remains a key way for hotels to do this.
                 </div>
                 <div class="choose__content flex flex_wrap">
-                    <div class="choose__wrapper">
+                    <div class="choose__column">
                         <div class="choose__item text-center">
                             <img class="choose__img" src="assets/images/choose.png" alt="choose">
                             <h5 class="choose__title">
@@ -113,7 +115,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="choose__wrapper">
+                    <div class="choose__column">
                         <div class="choose__item text-center">
                             <img class="choose__img" src="assets/images/friendly.png" alt="friendly">
                             <h5 class="choose__title">
@@ -124,7 +126,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="choose__wrapper">
+                    <div class="choose__column">
                         <div class="choose__item text-center">
                             <img class="choose__img" src="assets/images/Responsibility.png" alt="responsibility">
                             <h5 class="choose__title">
@@ -135,8 +137,7 @@
                             </p>
                         </div>
                     </div>
-
-                    <div class="choose__wrapper">
+                    <div class="choose__column">
                         <div class="choose__item text-center">
                             <img class="choose__img" src="assets/images/order.png" alt="order">
                             <h5 class="choose__title">
@@ -153,7 +154,7 @@
         <section class="about">
             <div class="container">
                 <div class="about__inner flex flex_wrap">
-                    <article class="about__item">
+                    <div class="about__item">
                         <h2 class="title about__title">
                             About hotel gallery
                         </h2>
@@ -165,12 +166,12 @@
                         <div class="about__button">
                             <a class="button" href="#">View more</a>
                         </div>
-                    </article>
-                    <article class="about__item">
+                    </div>
+                    <div class="about__item">
                         <div class="about__product">
                             <img class="about__img" src="assets/images/about-1.jpg" alt="room">
                             <div class="about__description">
-                                <div class="flex flex_space-between flex_baseline">
+                                <div class="flex flex_space-between flex_align-baseline">
                                     <div class="about__description-title">
                                         Lux: Room
                                     </div>
@@ -183,8 +184,8 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <article class="about__item">
+                    </div>
+                    <div class="about__item">
                         <div class="about__product">
                             <img class="about__img" src="assets/images/about-2.jpg" alt="room">
                             <div class="about__description">
@@ -201,8 +202,8 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <article class="about__item">
+                    </div>
+                    <div class="about__item">
                         <div class="about__product">
                             <img class="about__img" src="assets/images/about-3.jpg" alt="room">
                             <div class="about__description">
@@ -219,8 +220,8 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <article class="about__item">
+                    </div>
+                    <div class="about__item">
                         <div class="about__product">
                             <img class="about__img" src="assets/images/about-4.jpg" alt="room">
                             <div class="about__description">
@@ -237,8 +238,8 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <article class="about__item">
+                    </div>
+                    <div class="about__item">
                         <div class="about__product">
                             <img class="about__img" src="assets/images/about-5.jpg" alt="room">
                             <div class="about__description">
@@ -255,7 +256,7 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -269,7 +270,7 @@
                         <a class="button" href="#">View All</a>
                     </div>
                 </div>
-                <div class="client__content flex flex_space-between flex_wrap">
+                <div class="client__column flex flex_space-between flex_wrap">
                     <div class="client__wrapper">
                         <div class="client__item text-center">
                             <img class="client__img" src="assets/images/client-1.jpg" alt="David lee">
@@ -315,17 +316,17 @@
                 </div>
             </div>
         </section>
-        <section class="connect">
+        <section class="contact-us">
             <div class="container text-center">
-                <h4 class="sup-title uppercase connect__sup-title">
+                <h4 class="subtitle uppercase contact-us__subtitle">
                     STAY IN TOUCH
                 </h4>
-                <h2 class="title connect__title">
+                <h2 class="title contact-us__title">
                     Join our email. First to know about specials,events and more!
                 </h2>
-                <form class="form">
-                    <input class="form-input" type="email" placeholder="Enter your email address">
-                    <button class="button connect__form-btn" type="submit">Subscribe</button>
+                <form class="contact-us__form">
+                    <input class="contact-us__input" type="email" placeholder="Enter your email address">
+                    <button class="button contact-us__btn" type="submit">Subscribe</button>
                 </form>
             </div>
         </section>
@@ -334,7 +335,7 @@
         <div class="container">
             <div class="footer__inner flex flex_wrap">
                 <div class="footer__social">
-                    <a href="#"><img class="logo" src="assets/images/logo.png" alt="logo"></a>
+                    <a class="footer__logo" href="#"><img class="logo" src="assets/images/logo.png" alt="logo"></a>
                     <div class="footer__text">
                         Travel deals on hotels, flights, vacation packages.
                     </div>
@@ -354,7 +355,7 @@
                 </div>
                 <div class="flex">
                     <div class="footer__nav">
-                        <h5 class="footer__nav-title">
+                        <h5 class="footer__title">
                             Home
                         </h5>
                         <ul>
@@ -364,7 +365,7 @@
                         </ul>
                     </div>
                     <div class="footer__nav">
-                        <h5 class="footer__nav-title">
+                        <h5 class="footer__title">
                             Pages
                         </h5>
                         <ul>
@@ -375,11 +376,10 @@
                     </div>
                 </div>
                 <div class="footer__sub">
-                    <h5 class="footer__nav-title uppercase">SUBSCRIBE</h5>
-                    <form class="form">
-                        <input class="form-input footer__form-input" type="email"
-                            placeholder="Enter your email address">
-                        <button class="button connect__form-btn" type="submit">Subscribe</button>
+                    <h5 class="footer__title uppercase">SUBSCRIBE</h5>
+                    <form class="footer__form">
+                        <input class="footer__input" type="email" placeholder="Enter your email address">
+                        <button class="button footer__btn" type="submit">Subscribe</button>
                     </form>
                 </div>
             </div>

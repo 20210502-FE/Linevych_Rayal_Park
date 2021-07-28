@@ -1,22 +1,23 @@
 .header {
-    background-image: url(../assets/images/banner-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 690px;
-    padding-bottom: 201px;
-    position: relative;
-
+    position: absolute;
+    padding-top: 35px;
+    width: 100%;
+    
     &__logo {
         margin-right: 108px;
 
         @include respond-to(tablet-landscape) {
-            margin-right: 30px;
+            margin: 0 30px 30px 0;
+        }
+
+        @include respond-to(tablet-portrait) {
+            margin: 0;
         }
     }
 
     &__button {
-        padding-top: 50px;
+        display: flex;
+        align-items: center;
 
         @media screen and (max-width:721px) {
             padding-top: 0;
@@ -24,8 +25,7 @@
     }
 
     &__content {
-        margin-bottom: 78px;
-
+        
         @include respond-to(desktop) {
             margin-bottom: 30px;
         }
@@ -40,47 +40,10 @@
 
         &-nav {
             justify-content: space-between;
-        }
-    }
-}
+            align-items: center;
 
-.menu {
-    padding-top: 52px;
-
-    &__list {
-
-        @include respond-to(tablet-portrait) {
-            display: block;
-            position: absolute;
-            right: 0;
-            background-color: transparent;
-            text-align: center;
-            transition: all 1s;
-            transform: translateY(-300%);
-            width: 300px;
-            margin-right: 20px;
-        }
-    }
-
-    &__item {
-        padding: 0 20px;
-
-        @include respond-to(tablet-landscape) {
-            padding: 0 10px;
-            text-align: end;
-        }
-
-        &-link {
-            font-family: $g-font-medium;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 150%;
-            color: rgba(8, 31, 50, 0.7);
-            transition: all .5s;
-            
-            &:hover {
-                color: $color-denim;
+            @include respond-to(tablet-portrait) {
+                margin-bottom: 26px;
             }
         }
     }

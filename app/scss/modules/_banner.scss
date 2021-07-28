@@ -1,9 +1,10 @@
 .banner {
-    position: absolute;
-    top: 214px;
-    left: 0;
-    right: 0;
-    margin: auto;
+    background-image: url(../assets/images/banner-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 690px;
+    padding-top: 200px;
 
     &__title {
         font-family: $g-font-semi-bold;
@@ -29,47 +30,6 @@
         margin-bottom: 30px;
         @media screen and (max-width:721px) {
             max-width: 450px;;
-        }
-    }
-
-    &__bottom {
-        background: rgba(255, 255, 255, 0.21);
-        backdrop-filter: blur(70px);
-        border-radius: 10px;
-        max-width: 687px;
-        position: relative;
-        left: 0;
-        bottom: -85px;
-
-        @include respond-to(tablet-portrait) {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.21);
-            backdrop-filter: blur(70px);
-            border-radius: 10px;
-        }
-    }
-
-    &__item {
-        padding: 24px 30px;
-
-        @include respond-to(tablet-landscape) {
-            padding: 24px 20px;
-        }
-
-        &:first-child {
-            padding-left: 49px;
-
-            @include respond-to(tablet-landscape) {
-                padding-left: 20px;
-            }
-        }
-    }
-
-    &__button {
-        padding: 0 49px 0 30px;
-        
-        @include respond-to(tablet-landscape) {
-         padding: 0 10px;   
         }
     }
 }
