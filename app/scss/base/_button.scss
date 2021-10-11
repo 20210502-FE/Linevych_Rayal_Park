@@ -1,17 +1,33 @@
 .button {
-    font-family: $o-font-bold;
+    font-family: $g-font-medium;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 150%;
     color: $color-white;
     border-radius: 5px;
-    &_yellow {
-        background-color: $color-corn;
-        border-color: $color-corn;
+    background-color: $color-denim;
+    padding: 15px 30px;
+    transition: all .5s;
+
+    &:hover {
+        background-color: $color-black-pearl;
     }
-    &_transparent {
-        background-color: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+
+    &_small {
+        font-family: $g-font-medium;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 150%;
+        color: $color-white;
+        border-radius: 5px;
+        background-color: $color-denim;
+        padding: 10px 20px;
+        transition: all .5s;
+        
+        &:hover {
+            background-color: $color-black-pearl;
+        }
     }
 }

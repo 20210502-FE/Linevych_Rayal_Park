@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.flex_align-baseline {
+    align-items: baseline;
+}
+
 .flex_align-start {
     align-items: start;
 }
@@ -44,6 +48,11 @@
 
 .text-center {
     text-align: center
+}
+
+.flex_basis-25 {
+    flex-basis: 25%;
+    max-width: 25%;
 }
 
 .flex_basis-33 {
